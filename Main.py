@@ -22,4 +22,5 @@ DYSLBR = input('How manys did you work this month? ')
 MTHLYPAY = float(PRDAYSAL) * float(DYSLBR)
 #print(MTHLYPAY, 'this Should be your Salary This Month')
 
+print(PRDAYSAL, (color.GREEN + 'is your per-day salary' + color.END))
 print(MTHLYPAY, (color.GREEN + 'is your Monthly Salary' + color.END))
