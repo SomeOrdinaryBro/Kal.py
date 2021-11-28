@@ -10,17 +10,21 @@ class color:
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
-
-#calculating the salary perday
 PRHR = input('How Much Do You Get Paid Per-Hour: ')
 HRSPD = input('How Many Hours do you Work Per-day: ')
 PRDAYSAL = float(PRHR) * float(HRSPD) 
 
-#calculating the salary permonth using 'PRDAYSAL' from above code
 DYSLBR = input('How manys did you work this month? ')
 
-MTHLYPAY = float(PRDAYSAL) * float(DYSLBR)
-#print(MTHLYPAY, 'this Should be your Salary This Month')
+MTHLYPAY = int(PRDAYSAL) * int(DYSLBR)
 
-print(PRDAYSAL, (color.GREEN + 'is your per-day salary' + color.END))
-print(MTHLYPAY, (color.GREEN + 'is your Monthly Salary' + color.END))
+#NOT USING THIS SINCE IM USING A ASCII OUTPUT BELOW... SORT OF..
+#print(PRDAYSAL, (color.GREEN + 'is your per-day salary' + color.END))
+#print(MTHLYPAY, (color.GREEN + 'is your Monthly Salary' + color.END))
+
+print("\n\n")
+print("     Y O U R - S A L A R Y - D E T A I L S ")
+print("==============================================")
+print("YOUR PER-DAY SALARY: ", float(PRDAYSAL), (color.GREEN + 'is your per-day salary' + color.END))
+print("YOUR MONTHLY SALARY: ", int(MTHLYPAY), (color.GREEN + 'is your Monthly Salary' + color.END))
+print("==============================================")
