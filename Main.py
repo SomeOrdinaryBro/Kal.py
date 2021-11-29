@@ -51,3 +51,5 @@ if EPF == "YES":
 
 elif EPF == ("NO"):
    SALARYDETAILSWITHOUTEPF()
+   
+   
