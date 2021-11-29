@@ -35,8 +35,8 @@ if EPF == "YES":
 
 print("\n\n")
 print("     Y O U R - S A L A R Y - D E T A I L S ")
-print("==============================================")
+print("====================================================================")
 print("YOUR PER-DAY SALARY: ", float(PRDAYSAL), (color.GREEN + 'is your per-day salary' + color.END))
 print("YOUR BASIC SALARY: ", int(MTHLYPAY), (color.GREEN + 'is your Monthly Salary' + color.END))
 print("YOUR MONTHLY SALARY: ", float(SALWITHEPF), (color.GREEN + 'is your Salary in hand with Contribution to EPF' + color.END))
-print("==============================================")
+print("====================================================================")
