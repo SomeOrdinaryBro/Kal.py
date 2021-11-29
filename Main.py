@@ -1,3 +1,21 @@
+def SALARYDETAILSTOPRINTWITHEPF():
+   print("\n\n")
+   print("          Y O U R      -      S A L A R Y -      D E T A I L S ")
+   print("================================================================================")
+   print("YOUR PER-DAY SALARY: ", float(PRDAYSAL), (color.GREEN + 'is your per-day salary' + color.END))
+   print("YOUR BASIC SALARY: ", int(MTHLYPAY), (color.GREEN + 'is your Monthly Salary' + color.END))
+   print("YOUR MONTHLY SALARY: ", float(SALWITHEPF), (color.GREEN + 'is your Salary in hand with 8% Contribution to EPF' + color.END))
+   print("================================================================================")
+
+def SALARYDETAILSWITHOUTEPF():
+   print("\n\n")
+   print("          Y O U R      -      S A L A R Y -      D E T A I L S ")
+   print("================================================================================")
+   print("YOUR PER-DAY SALARY: ", float(PRDAYSAL), (color.GREEN + 'is your per-day salary' + color.END))
+   print("YOUR BASIC SALARY: ", int(MTHLYPAY), (color.GREEN + 'is your Monthly Salary' + color.END))
+   print("================================================================================")
+
+
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -29,18 +47,7 @@ if EPF == "YES":
 #print(PRDAYSAL, (color.GREEN + 'is your per-day salary' + color.END))
 #print(MTHLYPAY, (color.GREEN + 'is your Monthly Salary' + color.END))
 
-   print("\n\n")
-   print("     Y O U R - S A L A R Y - D E T A I L S ")
-   print("================================================================================")
-   print("YOUR PER-DAY SALARY: ", float(PRDAYSAL), (color.GREEN + 'is your per-day salary' + color.END))
-   print("YOUR BASIC SALARY: ", int(MTHLYPAY), (color.GREEN + 'is your Monthly Salary' + color.END))
-   print("YOUR MONTHLY SALARY: ", float(SALWITHEPF), (color.GREEN + 'is your Salary in hand with 8% Contribution to EPF' + color.END))
-   print("================================================================================")
+   SALARYDETAILSTOPRINTWITHEPF()
 
 elif EPF == ("NO"):
-   print("\n\n")
-   print("     Y O U R - S A L A R Y - D E T A I L S ")
-   print("================================================================================")
-   print("YOUR PER-DAY SALARY: ", float(PRDAYSAL), (color.GREEN + 'is your per-day salary' + color.END))
-   print("YOUR BASIC SALARY: ", int(MTHLYPAY), (color.GREEN + 'is your Monthly Salary' + color.END))
-   print("================================================================================")
+   SALARYDETAILSWITHOUTEPF()
