@@ -117,7 +117,7 @@ def ShapesKal():
       print("Select operation.")
       print("1.Perimeter")
       print("2.Area")
-      choice = input("Enter choice(1/2): ")
+      choice = input("Enter choice[1/2]: ")
   
       if choice in ('1', '2'):
         
@@ -152,29 +152,66 @@ def ShapesKal():
   
           elif choice == '3':
               Rectangle()
-                      
-          next_calculation = input("Let's do next calculation? (yes/no): ")
-          if next_calculation == "no":
-            break
-      
-      else:
-          print("Invalid Input")
+
+def NormalKal():
+  def add(A, B):
+      return A + B
+  def subtract(A, B):
+      return A - B
+  def multiply(A, B):
+      return A * B
+  def divide(A, B):
+      return A / B
+  
+  print("What Type Of Calculation Would You Like to do Today?")
+  print("1.Add")
+  print("2.Subtract")
+  print("3.Multiply")
+  print("4.Divide")
+  
+  while True:
+      choice = input("Please type your choice [1/2/3/4]: ")
+      print("---------------------------------------------")
+    
+      if choice in ('1', '2', '3', '4'):
+
+          num1 = float(input("Enter first number: "))
+          num2 = float(input("Enter second number: "))
+  
+          if choice == '1':
+              print(num1, "+", num2, "=", add(num1, num2))
+          elif choice == '2':
+              print(num1, "-", num2, "=", subtract(num1, num2))
+          elif choice == '3':
+              print(num1, "*", num2, "=", multiply(num1, num2))
+          elif choice == '4':
+              print(num1, "/", num2, "=", divide(num1, num2))
+            
+  
 while True:
     print("What Kind Of Calculation Would You Like To Do Today?")
+    print(" ")
     print("Select 1 for Salary Calculator")
     print("Select 2 to Calculate Shapes [Peri/dia] etc.")
-  
-    choice = input("Enter choice(1/2): ")
+    print("Select 3 for Normal Calculator [add/sub/div/mul] etc.")  
+    print("-----------------------------------------------------")  
+    choice = input("Enter Your choice [1/2/3]: ")
 
-    if choice in ('1', '2'):
+  
+    if choice in ('1', '2','3'):
       
         if choice == '1':
             SalarayKal()
 
         elif choice == '2':
             ShapesKal()
+
+        elif choice == '3':
+            NormalKal()       
+
        
-        next_calculation = input("Let's do next calculation? (YES/NO): ")
+        next_calculation = input("Would You Like To Do Another Calculation? (YES/NO): ")
+        print("Please Type in Capital Letters (CapsLock On)")
         if next_calculation == "NO":
           break
     
