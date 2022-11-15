@@ -192,8 +192,8 @@ while True:
     print("What Kind Of Calculation Would You Like To Do Today?")
     print(" ")
     print("Select 1 for Salary Calculator")
-    print("Select 2 to Calculate Shapes [Peri/dia] etc.")
-    print("Select 3 for Normal Calculator [add/sub/div/mul] etc.")  
+    print("Select 2 to Calculate Shapes [Peri & dia meter] etc.")
+    print("Select 3 for Normal Calculator [+/-/div/*] etc.")  
     print("-----------------------------------------------------")  
     choice = input("Enter Your choice [1/2/3]: ")
 
