@@ -63,111 +63,155 @@ def SalarayKal():
      CAPITAL_OUTPUT2()
   
   input()
+
+def ShapesKal():
+  def Circle():                
+      print("Select operation.")
+      print("1.Diameter")
+      print("2.Circumference")
+      print("3.Area")
+      choice = input("Enter choice(1/2/3): ")
   
-def Circle():
+      if choice in ('1', '2', '3'):
+        
+          if choice == '1':
+              PI = 3.14
+              radius = float(input(' Please Enter the radius of a circle: '))
+  
+              diameter = 2 * radius
+              print(" \nDiameter Of a Circle = %.2f" %diameter)
+              
+          elif choice == '2':
+              PI = 3.14
+              radius = float(input(' Please Enter the radius of a circle: '))
+  
+              circumference = 2 * PI * radius
+              print(" Circumference Of a Circle = %.2f" %circumference)
+  
+          elif choice == '3':
+              PI = 3.14
+              radius = float(input(' Please Enter the radius of a circle: '))
+  
+              area = PI * radius * radius
+              print(" Area Of a Circle = %.2f" %area)
+  
+  def Square(): 
+      print("Select operation.")
+      print("1.Perimeter")
+      print("2.Area")
+      choice = input("Enter choice(1/2): ")
+  
+      if choice in ('1', '2'):
+        
+          if choice == '1':
+              s=int(input("How Many Sides Does Your Squre Have : "))
+              area=s*s
+              print("Area of Square : ",area)
+              
+          elif choice == '2':
+              s=int(input("How Many Sides Does Your Squre Have : "))
+              perimeter=4*s
+              print("Perimeter of Square : ",perimeter)
+  
+  def Rectangle():
+      print("Select operation.")
+      print("1.Perimeter")
+      print("2.Area")
+      choice = input("Enter choice[1/2]: ")
+  
+      if choice in ('1', '2'):
+        
+          if choice == '1':
+              l=int(input("Length : "))
+              w=int(input("Width : "))
+              area=l*w
+              print("Area of Rectangle : ",area)
+  
+          elif choice == '2':
+              l=int(input("Length : "))
+              w=int(input("Width : "))
+              perimeter=2*(l+w)
+              print("Perimeter of Rectangle : ",perimeter)
+  
+  print("Select operation.")
+  print("1.Circle")
+  print("2.Square")
+  print("2.Rectangle")
+  
+  
+  while True:
+      choice = input("Enter choice(1/2/3): ")
+  
+      if choice in ('1', '2', '3'):
+        
+          if choice == '1':
+              Circle()
+  
+          elif choice == '2':
+              Square()
+  
+          elif choice == '3':
+              Rectangle()
+
+def NormalKal():
+  def add(A, B):
+      return A + B
+  def subtract(A, B):
+      return A - B
+  def multiply(A, B):
+      return A * B
+  def divide(A, B):
+      return A / B
+  
+  print("What Type Of Calculation Would You Like to do Today?")
+  print("1.Add")
+  print("2.Subtract")
+  print("3.Multiply")
+  print("4.Divide")
+  
+  while True:
+      choice = input("Please type your choice [1/2/3/4]: ")
+      print("---------------------------------------------")
+    
+      if choice in ('1', '2', '3', '4'):
+
+          num1 = float(input("Enter first number: "))
+          num2 = float(input("Enter second number: "))
+  
+          if choice == '1':
+              print(num1, "+", num2, "=", add(num1, num2))
+          elif choice == '2':
+              print(num1, "-", num2, "=", subtract(num1, num2))
+          elif choice == '3':
+              print(num1, "*", num2, "=", multiply(num1, num2))
+          elif choice == '4':
+              print(num1, "/", num2, "=", divide(num1, num2))
+            
+  
+while True:
+    print("What Kind Of Calculation Would You Like To Do Today?")
     print(" ")
-    print("Select an opration to Perform")
-    print(" ")
-    print("1.Diameter")
-    print("2.Circumference")
-    print("3.Area")
-    print(" ")
+    print("Select 1 for Salary Calculator")
+    print("Select 2 to Calculate Shapes [Peri/dia] etc.")
+    print("Select 3 for Normal Calculator [add/sub/div/mul] etc.")  
+    print("-----------------------------------------------------")  
     choice = input("Enter Your choice [1/2/3]: ")
 
-    if choice in ('1', '2', '3'):
-
+  
+    if choice in ('1', '2','3'):
+      
         if choice == '1':
-            PI = 3.14
-            radius = float(input('Please Enter the radius of a circle: '))
-
-            diameter = 2 * radius
-            print(" \nDiameter Of a Circle = %.2f" % diameter)
+            SalarayKal()
 
         elif choice == '2':
-            PI = 3.14
-            radius = float(input(' Please Enter the radius of a circle: '))
-
-            circumference = 2 * PI * radius
-            print(" Circumference Of a Circle = %.2f" % circumference)
+            ShapesKal()
 
         elif choice == '3':
-            PI = 3.14
-            radius = float(input(' Please Enter the radius of a circle: '))
+            NormalKal()       
 
-            area = PI * radius * radius
-            print(" Area Of a Circle = %.2f" % area)
-
-
-def Square():
-    print(" ")
-    print("Select an opration to Perform")
-    print(" ")
-    print("1.Perimeter")
-    print("2.Area")
-    print(" ")
-    choice = input("Enter Your choice [1/2]: ")
-
-    if choice in ('1', '2'):
-
-        if choice == '1':
-            s = int(input("How Many Sides Does Your Squre Have : "))
-            area = s * s
-            print("Area of Square : ", area)
-
-        elif choice == '2':
-            s = int(input("How Many Sides Does Your Squre Have : "))
-            perimeter = 4 * s
-            print("Perimeter of Square : ", perimeter)
-
-
-def Rectangle():
-    print(" ")
-    print("Select an opration to Perform")
-    print(" ")
-    print("1.Perimeter")
-    print("2.Area")
-    print(" ")
-    choice = input("Enter Your choice [1/2]: ")
-
-    if choice in ('1', '2'):
-
-        if choice == '1':
-            l = int(input("Length : "))
-            w = int(input("Width : "))
-            area = l * w
-            print("Area of Rectangle : ", area)
-
-        elif choice == '2':
-            l = int(input("Length : "))
-            w = int(input("Width : "))
-            perimeter = 2 * (l + w)
-            print("Perimeter of Rectangle : ", perimeter)
-
-
-while True:
-    print(".......................................")
-    print("Select A Shape to Perform Calculation's")
-    print(".......................................")
-    print(" ")
-    print("1.Circle")
-    print("2.Square")
-    print("2.Rectangle")
-    print(" ")
-
-    choice = input("Enter Your choice [1/2/3] : ")
-
-    if choice in ('1', '2', '3'):
-
-        if choice == '1':
-            Circle()
-
-        elif choice == '2':
-            Square()
-
-        elif choice == '3':
-            Rectangle()
-
+       
         next_calculation = input("Would You Like To Do Another Calculation? (YES/NO): ")
+        print("Please Type in Capital Letters (CapsLock On)")
         if next_calculation == "NO":
           break
         if next_calculation == "no":
